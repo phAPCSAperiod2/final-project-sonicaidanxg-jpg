@@ -45,6 +45,13 @@ public class Quote{
         return QuotesList;
     }
 
-    
+    /*
+    Returns random quote from QuotesList
+    @return String
+    @author Aidan Manzanares
+     */
+    public String returnRandQuote(){
+        return QuotesList.get((int) Math.random()*((QuotesList.size() - 1) + 1));
+    }
 
 }
