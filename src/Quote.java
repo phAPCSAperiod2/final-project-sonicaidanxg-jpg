@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Quote{
 
-    public ArrayList<String> QuotesList = new ArrayList<>();
+    public static ArrayList<String> QuotesList = new ArrayList<>();
     private String text;
     private String author;
 
