@@ -54,4 +54,34 @@ public class Quote{
         return QuotesList.get((int) Math.random()*((QuotesList.size() - 1) + 1));
     }
 
+    /*
+    Creates a new quote object which is automatically added to the quoteList.
+    @param text The text of the quote.
+    @param author The author of the quote.
+    @author Aidan Manzanares
+    */
+    public void addQuote(String text, String author){
+        Quote q = new Quote(text, author);
+    }
+
+
+    /*
+    Creates a quote object without an author.
+    @param text The text of the quote.
+    @author Aidan Manzanares.
+    */
+
+    public void addQuote(String text){
+        Quote q = new Quote(text);
+    }
+
+    /*
+    Removes a quote from the quotelist using an index starting at 1
+    @param index The index of the quote starting from 1.
+    @author Aidan Manzanares.
+    */
+    public void removeQuote(int index){
+        QuotesList.remove(index - 1);
+    }
+
 }
