@@ -1,4 +1,9 @@
+import java.net.URL;
 import java.util.ArrayList;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class Image {
 
@@ -32,7 +37,7 @@ public class Image {
     }
 
     /*
-    Uses a web url to display an image.
+    Picks a random image from imageList and displays it using the url.
 
     @author Aidan Manzanares
     */
@@ -40,9 +45,34 @@ public class Image {
 
     // wip
     public void displayRandImage() {
-        Image f = ImageList.get((int) Math.random() * ((ImageList.size() - 1) + 1));
+
+        //Checks if list is empty and returns.
+
+        if (ImageList.isEmpty()) {
+        System.out.println("No images to display.");
+        return;
+        }
+
+        //Gets a random image object and the link
+
+        Image f = ImageList.get((int) (Math.random() * ImageList.size()));
         String link = f.imageLink;
-        System.out.println(link);
+        // System.out.println(link);
+
+        //Creates JFrame object
+
+        JFrame frame = new JFrame();
+
+        try{
+            ImageIcon icon = new ImageIcon(new URL(link));
+            JLabel label = new JLabel(icon);
+            frame.add(label);
+            frame.pack();
+            frame.setVisible(true);
+        }
+        catch (Exception e) {
+            System.out.println("Error displaying image: " + e.getMessage());
+        }
     }
 
     /*
