@@ -96,4 +96,25 @@ public class Image {
         ImageList.remove(index - 1);
     }
 
+    /*
+    Returns the identifier for an image object.
+
+    @return String
+    @author Aidan Manzanares
+    */
+    public String toString(){
+        return identifier;
+    }
+
+    /*
+    Prints out the identifiers for all images in ImageList
+    @author Aidan Manzanares
+    */
+    public void displayIDs(){
+        for (Image i: ImageList){
+            System.out.println(i);
+        }
+    }
+
+
 }

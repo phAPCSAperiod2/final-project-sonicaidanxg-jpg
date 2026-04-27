@@ -47,5 +47,7 @@ public class App {
         imgManager.removeImage(1);
         imgManager.displayRandImage();
 
+        imgManager.displayIDs();
+
     }
 }
