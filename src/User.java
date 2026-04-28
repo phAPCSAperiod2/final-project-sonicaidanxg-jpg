@@ -23,7 +23,29 @@ public class User{
 
     }
 
-    
+    public void loop(){
+        boolean run = true;
+        String input = null;
+        Scanner scanner = new Scanner(System.in);
+        while (run) {
+            System.out.println("Welcome to the Motivation Center! \n What would you like to do?");
+            //Print Menu
+            /*1. Get a random Quote
+              2. Get a random Image.
+              3. View the QuoteList.
+              4. View the ImageList.
+              5. Add a quote.
+              6. Add an image.
+              7. Remove a quote.
+              8. Remove an image.
+              9. Quit */
+
+            input = scanner.nextLine();
+            if (input == 9){
+                run = false;
+            }
+        }
+    }
 
 
 
