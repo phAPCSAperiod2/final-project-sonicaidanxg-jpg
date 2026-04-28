@@ -23,7 +23,9 @@ public class Image {
     public Image(String link, String id) {
         imageLink = link;
         identifier = id;
+        // ImageList.add(this);
     }
+
 
     /*
     Returns the ImageList
