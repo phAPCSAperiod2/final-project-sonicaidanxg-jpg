@@ -66,7 +66,7 @@ public class User {
                 //add image
             }
             else if (input.equals("7")){
-                //remove quote
+                removingQuote(q);
             }
             else if (input.equals("8")){
                 //remove image
@@ -102,7 +102,14 @@ public class User {
 
         }
 
+        public void removingQuote(Quote q){
+            Scanner scanner = new Scanner(System.in);
+            System.out.println(q.returnQuoteList());
+            System.out.println("Enter the index of the quote you'd like to remove. (Starting at 1 for the 1st quote.)");
+            int index = scanner.nextInt();
+            q.removeQuote(index);
 
+        }
 
 
 
