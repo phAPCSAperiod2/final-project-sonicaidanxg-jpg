@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class User {
@@ -52,7 +51,15 @@ public class User {
         }
     }
 
-    public void addingQuote(ArrayList<String> q){
+    /*
+    Adds a quote to the quotelist with user input.
+
+
+    @param Quote the Quote object to access the quote list.
+    @author Aidan Manzanares
+    */
+
+    public void addingQuote(Quote q){
             Scanner scanner = new Scanner(System.in);
             System.out.println("What is the text of the quote?");
             String text = scanner.nextLine();
