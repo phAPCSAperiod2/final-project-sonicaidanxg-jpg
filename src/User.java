@@ -1,8 +1,11 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class User{
+public class User {
 
-    public void initializeLists(){
+
+
+    public void initializeLists() {
 
         System.out.println("Initializing lists...");
 
@@ -10,16 +13,18 @@ public class User{
         q.addQuote("Second quote", "Author Two");
         q.addQuote("Third quote");
 
-        Image i = new Image("https://cdn12.picryl.com/photo/2016/12/31/deer-whitetail-fawn-animals-087653-1024.jpg", "Image1");
+        Image i = new Image("https://cdn12.picryl.com/photo/2016/12/31/deer-whitetail-fawn-animals-087653-1024.jpg",
+                "Image1");
         i.addImage(i);
-        Image b = new Image("https://pixnio.com/free-images/fauna-animals/deers/young-red-deer-fawn-odocoileus-virginianus.jpg", "Image2");
+        Image b = new Image(
+                "https://pixnio.com/free-images/fauna-animals/deers/young-red-deer-fawn-odocoileus-virginianus.jpg",
+                "Image2");
         i.addImage(b);
-        Image c = new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg7mqOU8dEnsBAUEoHPwHRv3ITz0uOGnC5Vw&s", Image3);
+        Image c = new Image(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg7mqOU8dEnsBAUEoHPwHRv3ITz0uOGnC5Vw&s", "Image3");
         i.addImage(c);
 
         System.out.println("Lists initialized.");
-
-
 
     }
 
@@ -41,13 +46,36 @@ public class User{
               9. Quit */
 
             input = scanner.nextLine();
-            if (input == 9){
+            if (input.equals("9")){
                 run = false;
             }
         }
     }
 
+    public void addingQuote(ArrayList<String> q){
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("What is the text of the quote?");
+            String text = scanner.nextLine();
+            System.out.println("Does the quote have an author? (Y/N)");
+            String yn = scanner.nextLine();
+            if (yn.equalsIgnoreCase("y")){
+                System.out.println("Please enter the author of the quote.");
+                String author = scanner.nextLine();
+                q.addQuote(text, author);
+            }
+            if (yn.equalsIgnoreCase("n")){
+                q.addQuote(text);
+            }
+
+        }
 
 
 
-}
+
+
+
+
+
+    }
+
+
