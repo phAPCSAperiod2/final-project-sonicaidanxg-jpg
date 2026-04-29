@@ -2,35 +2,37 @@ import java.util.Scanner;
 
 public class User {
 
+//Do this in App.java.
 
+    // public void initializeLists() {
 
-    public void initializeLists() {
+    //     System.out.println("Initializing lists...");
 
-        System.out.println("Initializing lists...");
+    //     Quote q = new Quote("First quote", "Author One");
+    //     q.addQuote("Second quote", "Author Two");
+    //     q.addQuote("Third quote");
 
-        Quote q = new Quote("First quote", "Author One");
-        q.addQuote("Second quote", "Author Two");
-        q.addQuote("Third quote");
+    //     Image i = new Image("https://cdn12.picryl.com/photo/2016/12/31/deer-whitetail-fawn-animals-087653-1024.jpg",
+    //             "Image1");
+    //     i.addImage(i);
+    //     Image b = new Image(
+    //             "https://pixnio.com/free-images/fauna-animals/deers/young-red-deer-fawn-odocoileus-virginianus.jpg",
+    //             "Image2");
+    //     i.addImage(b);
+    //     Image c = new Image(
+    //             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg7mqOU8dEnsBAUEoHPwHRv3ITz0uOGnC5Vw&s", "Image3");
+    //     i.addImage(c);
 
-        Image i = new Image("https://cdn12.picryl.com/photo/2016/12/31/deer-whitetail-fawn-animals-087653-1024.jpg",
-                "Image1");
-        i.addImage(i);
-        Image b = new Image(
-                "https://pixnio.com/free-images/fauna-animals/deers/young-red-deer-fawn-odocoileus-virginianus.jpg",
-                "Image2");
-        i.addImage(b);
-        Image c = new Image(
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg7mqOU8dEnsBAUEoHPwHRv3ITz0uOGnC5Vw&s", "Image3");
-        i.addImage(c);
+    //     System.out.println("Lists initialized.");
 
-        System.out.println("Lists initialized.");
+    // }
 
-    }
-
-    public void loop(){
+    public void loop(Quote q, Image i){
         boolean run = true;
         String input = null;
         Scanner scanner = new Scanner(System.in);
+
+
         while (run) {
             System.out.println("Welcome to the Motivation Center! \n What would you like to do?");
             //Print Menu
@@ -45,7 +47,31 @@ public class User {
               9. Quit */
 
             input = scanner.nextLine();
-            if (input.equals("9")){
+            if (input.equals("1")){
+                System.out.println(q.returnRandQuote());
+            }
+            else if (input.equals("2")){
+                i.displayRandImage();
+            }
+            else if (input.equals("3")){
+                System.out.println(q.returnQuoteList());
+            }
+            else if (input.equals("4")){
+                i.displayIDs();
+            }
+            else if (input.equals("5")){
+                addingQuote(q);
+            }
+            else if (input.equals("6")){
+                //add image
+            }
+            else if (input.equals("7")){
+                //remove quote
+            }
+            else if (input.equals("8")){
+                //remove image
+            }
+            else if (input.equals("9")){
                 run = false;
             }
         }
