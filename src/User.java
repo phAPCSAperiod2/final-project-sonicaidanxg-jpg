@@ -63,13 +63,13 @@ public class User {
                 addingQuote(q);
             }
             else if (input.equals("6")){
-                //add image
+                addingImage(i);
             }
             else if (input.equals("7")){
                 removingQuote(q);
             }
             else if (input.equals("8")){
-                //remove image
+                removingImage(i);
             }
             else if (input.equals("9")){
                 run = false;
@@ -124,7 +124,14 @@ public class User {
 
         }
 
-        
+        public void removingImage(Image i){
+            Scanner scanner = new Scanner(System.in);
+            System.out.println(i.returnImageList());
+            System.out.println("Enter the index of the image you'd like to remove. (Starting at 1 for the 1st image.)");
+            int index = scanner.nextInt();
+            i.removeImage(index);
+
+        }
 
 
     }
