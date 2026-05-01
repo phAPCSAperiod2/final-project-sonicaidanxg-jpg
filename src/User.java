@@ -111,9 +111,20 @@ public class User {
 
         }
 
+        public void addingImage(Image i){
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("What is the link of the image?");
+            String link = scanner.nextLine();
+            System.out.println("What would you like to name the image?");
+            String name = scanner.nextLine();
+
+            Image im = new Image(link, name);
+            i.addImage(im);
 
 
+        }
 
+        
 
 
     }
