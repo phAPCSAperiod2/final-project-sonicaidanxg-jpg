@@ -27,7 +27,9 @@ public class User {
 
     // }
 
-    public void loop(Quote q, Image i){
+
+
+    public static void loop(Quote q, Image i){
         boolean run = true;
         String input = null;
         Scanner scanner = new Scanner(System.in);
@@ -85,7 +87,7 @@ public class User {
     @author Aidan Manzanares
     */
 
-    public void addingQuote(Quote q){
+    public static void addingQuote(Quote q){
             Scanner scanner = new Scanner(System.in);
             System.out.println("What is the text of the quote?");
             String text = scanner.nextLine();
@@ -102,7 +104,7 @@ public class User {
 
         }
 
-        public void removingQuote(Quote q){
+        public static void removingQuote(Quote q){
             Scanner scanner = new Scanner(System.in);
             System.out.println(q.returnQuoteList());
             System.out.println("Enter the index of the quote you'd like to remove. (Starting at 1 for the 1st quote.)");
@@ -111,7 +113,7 @@ public class User {
 
         }
 
-        public void addingImage(Image i){
+        public static void addingImage(Image i){
             Scanner scanner = new Scanner(System.in);
             System.out.println("What is the link of the image?");
             String link = scanner.nextLine();
@@ -124,7 +126,7 @@ public class User {
 
         }
 
-        public void removingImage(Image i){
+        public static void removingImage(Image i){
             Scanner scanner = new Scanner(System.in);
             System.out.println(i.returnImageList());
             System.out.println("Enter the index of the image you'd like to remove. (Starting at 1 for the 1st image.)");
