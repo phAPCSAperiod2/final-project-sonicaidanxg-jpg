@@ -19,7 +19,7 @@ Brief description of:
 - Program logic: Uses ArrayList methods.
 
 ## 🔹 Class Diagram
-Include or link your final class diagram.
+[Include or link your final class diagram.](https://drive.google.com/file/d/1uSIZtRPovSnImyECLZWlIBYqQfZrfxKk/view?usp=sharing)
 
 ## 🔹 Known Limitations / Future Improvements
 Doesn't work in codespaces.
