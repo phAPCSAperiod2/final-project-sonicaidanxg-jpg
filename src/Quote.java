@@ -51,7 +51,7 @@ public class Quote{
     @author Aidan Manzanares
      */
     public String returnRandQuote(){
-        return QuotesList.get((int) Math.random()*((QuotesList.size() - 1) + 1));
+        return QuotesList.get((int) (Math.random()*(QuotesList.size())));
     }
 
     /*
